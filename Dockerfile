@@ -39,7 +39,7 @@ WORKDIR /var/www/html
 COPY . .
 
 RUN composer install --no-dev --optimize-autoloader --no-interaction
-
+RUN php artisan storage:link
 # ==============================
 # Permissions
 # ==============================
